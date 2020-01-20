@@ -13,6 +13,7 @@ WIN_COMBINATIONS = [
   [2, 4, 6]]
 
 def won?(board)
+<<<<<<< HEAD
   WIN_COMBINATIONS.select do |win_combination|
  
   win_index_1 = win_combination[0]
@@ -48,3 +49,14 @@ def winner(board)
     return board[index]
   end
 end
+=======
+  WIN_COMBINATIONS.each.do |win_combination|
+   if board[win_combination[0]] == board[win_combination[1]] == board[win_combination[2]] && !position_taken?(board, win_combination[0])
+     return win_combination
+   else
+     false
+   end
+end
+
+
+>>>>>>> ed57dd8e79752b838be9bde6651492cc01ae957b
